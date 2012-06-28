@@ -12,7 +12,8 @@
     <includeDependencies package="." />
 
     <include package=".portlets" />
-    
+    <include file="behaviors.zcml" />
+
     <permission
         id="collective.nitf.AddNewsArticle"
         title="collective.nitf: Add News Article"

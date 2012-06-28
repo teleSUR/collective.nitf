@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:plone="http://namespaces.plone.org/plone">
+
+  <!-- Only use intids for objects with relations -->
+  <include package="plone.app.intid" />
+  <include package="z3c.relationfield" />
+
+    <plone:behavior
+        zcml:condition="installed plone.behavior"
+        title="Related nitf with collective.z3cform.widgets"
+        description="Adds the ability to assign related nitf"
+        provides=".behaviors.IRelatedItems"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+  <!-- Archetypes Content will support incoming relations -->
+  <class zcml:condition="installed Products.Archetypes"
+         class="Products.Archetypes.BaseObject.BaseObject">
+    <implements interface="z3c.relationfield.interfaces.IHasIncomingRelations" />
+  </class>
+
+</configure>
