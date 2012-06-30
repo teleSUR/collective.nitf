@@ -26,7 +26,10 @@ class IRelatedItems(form.Schema):
         default=[],
         value_type=RelationChoice(title=u"Related",
                                   source=ObjPathSourceBinder(
-                                    portal_type='collective.nitf.content')),
+                                    portal_type='collective.nitf.content',
+                                    sort_on='effective',
+                                    sort_order='reverse',
+                                    sort_limit='10')),
         required=False,
         )
     form.widget(relatedItems=MultiContentSearchFieldWidget)
