@@ -25,15 +25,11 @@ class IRelatedItems(form.Schema):
         title=_(u'label_related_items', default=u'Related Items'),
         default=[],
         value_type=RelationChoice(title=u"Related",
-                                  source=ObjPathSourceBinder(
-                                    portal_type='collective.nitf.content',
-                                    sort_on='effective',
-                                    sort_order='reverse',
-                                    sort_limit='10')),
+                                  source=ObjPathSourceBinder()),
         required=False,
         )
     form.widget(relatedItems=MultiContentSearchFieldWidget)
-
+    
 fieldset = Fieldset('categorization',
                     label=_(u'Categorization'),
                     fields=['relatedItems'])
