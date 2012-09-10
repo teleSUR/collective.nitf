@@ -61,4 +61,12 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+    <browser:page
+        name="related-search"
+        for="plone.formwidget.autocomplete.interfaces.IAutocompleteWidget"
+        permission="zope.Public"
+        class=".related_widget.RelatedSearch"
+        layer="collective.nitf.interfaces.INITFBrowserLayer"
+        />
+
 </configure>

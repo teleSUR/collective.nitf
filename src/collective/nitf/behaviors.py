@@ -9,8 +9,7 @@ from plone.supermodel.model import Fieldset
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.directives import form
 
-from collective.z3cform.widgets.multicontent_search_widget \
-    import MultiContentSearchFieldWidget
+from collective.nitf.related_widget import RelatedNITFFieldWidget
 try:
     from plone.app.dexterity import MessageFactory as _
 except ImportError:
@@ -28,7 +27,7 @@ class IRelatedItems(form.Schema):
                                   source=ObjPathSourceBinder()),
         required=False,
         )
-    form.widget(relatedItems=MultiContentSearchFieldWidget)
+    form.widget(relatedItems=RelatedNITFFieldWidget)
     
 fieldset = Fieldset('categorization',
                     label=_(u'Categorization'),
