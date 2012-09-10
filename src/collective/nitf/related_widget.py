@@ -64,6 +64,7 @@ class RelatedSearch(BaseRelatedSearch):
 
 class RelatedNITFWidget(BaseWidget):
     recurse_template = ViewPageTemplateFile('templates/nitf_related_recurse.pt')
+    display_template = ViewPageTemplateFile('templates/nitf_related_display.pt')
 
 
     def brainsToTerms(self, brains):
