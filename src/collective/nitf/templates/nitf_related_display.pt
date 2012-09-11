@@ -17,8 +17,8 @@
         >
     <li tal:repeat="term view/terms">
         <a tal:content="term/title"
-           tal:attributes="href term/token"
-           tal:condition="python:not(term.token.startswith('#error-'))"
+           tal:condition="python:not(term.token.startswith('#error-')) and term.value"
+           tal:attributes="href term/value/absolute_url"
            />
     </li>
 </ul>
