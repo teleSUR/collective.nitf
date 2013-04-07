@@ -8,10 +8,9 @@
          name="collective.nitf.LatestSectionableNITFPortlet"
          interface=".latest_sectionable_nitf.ILatestSectionableNITFPortlet"
          assignment=".latest_sectionable_nitf.Assignment"
-         edit_permission="cmf.ManagePortal"
          renderer=".latest_sectionable_nitf.Renderer"
          addview=".latest_sectionable_nitf.AddForm"
          editview=".latest_sectionable_nitf.EditForm"
          />
-        
+
 </configure>
