@@ -6,7 +6,7 @@ Because you have to know where your towel is.
 1.0a3 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Removing permission from portlet. [flecox]
+- Remove cmf.ManagePortal permission when editing the portlets. [flecox]
 
 
 1.0a2 (2012-06-18)
